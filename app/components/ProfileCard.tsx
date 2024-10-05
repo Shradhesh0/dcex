@@ -1,3 +1,6 @@
+/* eslint-disable jsx-a11y/alt-text */
+/* eslint-disable react/jsx-no-undef */
+/* eslint-disable react/no-children-prop */
 /* eslint-disable react/jsx-key */
 
 "use client" ;
@@ -9,6 +12,7 @@ import { useEffect, useState } from "react";
 import { TokenWithbalance, useTokens } from "../api/hooks/useTokens";
 import { TokenList } from "./TokenList";
 import { Swap } from "./Swap";
+import Image from "next/image";
 
 
 type Tab = "tokens" | "send" |"add_funds" |"swap" |"withdraw"
@@ -55,7 +59,7 @@ export const ProfileCard = ({publicKey}:{
              </div>
 
             <div className={`${selectedTab === "tokens" ?"visible":"hidden"}` }>
-             <Assests tokenBalances={tokenBalances} publicKey={publicKey} loading={loading} />
+             <Assests tokenBalances={tokenBalances } publicKey={publicKey} loading={loading} />
             </div>
             <div className={`${selectedTab === "withdraw" ?"visible":"hidden"}` }>
             <DontSupport children={"Not supported in India"} />
@@ -155,7 +159,7 @@ function Greeting({
 }){
   return (
     <div className="flex p-12" >
-      <img src={image} className="rounded-full w-16 h-16 mr-4" />
+      <Image src={image} className="rounded-full w-16 h-16 mr-4" alt={""} />
       <div className="text-2xl font-semibold flex flex-col justify-center" >
         Welcome , {name}
       </div>

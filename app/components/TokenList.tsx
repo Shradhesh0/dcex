@@ -1,5 +1,6 @@
 /* eslint-disable react/jsx-key */
 import { TokenWithbalance } from "../api/hooks/useTokens";
+import Image from "next/image";
 
 export function TokenList({ tokens }: { tokens: TokenWithbalance[] }) {
   return (
@@ -16,7 +17,7 @@ function TokenRow({ token }: { token: TokenWithbalance }) {
   return (
     <div className="flex justify-between">
       <div className="flex">
-        <img src={token.image} className="w-10 h-10 rounded-full mr-2" />
+        <Image src={token.image} className="w-10 h-10 rounded-full mr-2" alt={""} />
         <div>
         <div className="font-bold">{token.name}</div>
         <div className="font-slim">
