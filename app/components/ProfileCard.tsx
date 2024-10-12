@@ -159,7 +159,7 @@ function Greeting({
 }){
   return (
     <div className="flex p-12" >
-      <Image src={image} className="rounded-full w-16 h-16 mr-4" alt={""} />
+      <Image src={image} width={16} height={16} className="rounded-full w-16 h-16 mr-4" alt={""} />
       <div className="text-2xl font-semibold flex flex-col justify-center" >
         Welcome , {name}
       </div>

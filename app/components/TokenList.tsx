@@ -17,7 +17,7 @@ function TokenRow({ token }: { token: TokenWithbalance }) {
   return (
     <div className="flex justify-between">
       <div className="flex">
-        <Image src={token.image} className="w-10 h-10 rounded-full mr-2" alt={""} />
+        <Image src={token.image} width={10} height={10} className="w-10 h-10 rounded-full mr-2" alt={""} />
         <div>
         <div className="font-bold">{token.name}</div>
         <div className="font-slim">
